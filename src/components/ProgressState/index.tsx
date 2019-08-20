@@ -2,8 +2,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { gray500, gray700, orange600, white } from '../Colors';
-import { body2 } from '../TextStyles';
+import { gray500, gray700, orange600, white } from '../../Colors';
+import { body2 } from '../../TextStyles';
 
 interface Props {
   value?: string;

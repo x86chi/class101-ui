@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
-import { gray800 } from '../Colors';
-import { body2 } from '../TextStyles';
+import { gray800 } from '../../Colors';
+import { body2 } from '../../TextStyles';
 
 interface Props {
   /** 카드 타이틀 */

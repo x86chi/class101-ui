@@ -1,9 +1,9 @@
 import React, { PureComponent, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-import { gray600 } from '../Colors';
-import { body2, caption1 } from '../TextStyles';
-import Theme, { ThemeConfig } from '../Theme';
+import { gray600 } from '../../Colors';
+import { body2, caption1 } from '../../TextStyles';
+import Theme, { ThemeConfig } from '../../Theme';
 import { getTabActiveColorByType } from './utils';
 
 export type TabType = 'default' | 'red' | 'orange';

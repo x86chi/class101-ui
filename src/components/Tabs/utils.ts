@@ -1,5 +1,5 @@
-import { gray100, gray800, orange600, red600, white } from '../Colors';
-import { ThemeConfig, ThemeMode } from '../Theme';
+import { gray100, gray800, orange600, red600, white } from '../../Colors';
+import { ThemeConfig, ThemeMode } from '../../Theme';
 
 export const getTabBorderColor = (theme: ThemeConfig) => {
   return theme.mode === ThemeMode.LIGHT ? gray100 : gray800;

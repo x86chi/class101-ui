@@ -1,6 +1,6 @@
 import React, { PureComponent, ReactNode } from 'react';
 
-import { HTMLDivProps } from '../interfaces/props';
+import { HTMLDivProps } from '../../interfaces/props';
 import Header from './Header';
 
 interface Props {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { BadgeProps } from '../../Badge';
+import { BadgeProps } from '../Badge';
 import { media } from '../../BreakPoints';
 import { gray100 } from '../../Colors';
 import { IconProps } from '../../Icon';

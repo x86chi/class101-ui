@@ -16,7 +16,7 @@ const MessageText = styled.h6<TextProps>`
     vertical-align: middle;
   }
   color: ${props => props.color};
-`
+`;
 
 interface Props {
   color: string;
@@ -26,16 +26,18 @@ interface Props {
 
 const alertStyle = { marginRight: `2px` };
 
-
 export default class Message extends React.PureComponent<Props> {
   public render() {
-    const { color, message, descriptionIconFillColor } = this.props
+    const { color, message, descriptionIconFillColor } = this.props;
     return (
       <MessageText color={color}>
-        {descriptionIconFillColor !== undefined ? 
-        <span style={alertStyle}><Alert size={16} fillColor={descriptionIconFillColor} /></span> : null}
+        {descriptionIconFillColor !== undefined ? (
+          <span style={alertStyle}>
+            <Alert size={16} fillColor={descriptionIconFillColor} />
+          </span>
+        ) : null}
         <span>{message}</span>
       </MessageText>
-    )
+    );
   }
 }

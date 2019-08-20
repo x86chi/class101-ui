@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled, { css } from 'styled-components';
 
-import { media } from '../BreakPoints';
+import { media } from '../../BreakPoints';
 import {
   body1,
   body2,
@@ -13,7 +13,7 @@ import {
   headline2,
   headline3,
   subtitle1,
-} from '../TextStyles';
+} from '../../TextStyles';
 
 export type Typo = keyof typeof typographyList;
 export type TypoElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'div';

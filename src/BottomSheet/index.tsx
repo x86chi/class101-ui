@@ -1,7 +1,7 @@
 import React, { PureComponent, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-import Badge from '../Badge';
+import Badge from '../components/Badge';
 import { gray800, white } from '../Colors';
 import { Chevron } from '../Icon';
 import { HTMLDivProps } from '../interfaces/props';

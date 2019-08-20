@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { gray200, gray600 } from '../Colors';
+import { gray200, gray600 } from '../../Colors';
 
 interface Props {
   size?: number;

@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { gray300 } from '../Colors';
-import { Chevron } from '../Icon';
-import { caption1 } from '../TextStyles';
+import { gray300 } from '../../Colors';
+import { Chevron } from '../../Icon';
+import { caption1 } from '../../TextStyles';
 import Typography, { Typo } from '../Typography';
 
 interface Props {

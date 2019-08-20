@@ -1,4 +1,4 @@
-import Spinner from './';
+import Spinner from '.';
 
 describe('Grid', () => {
   it('값이 존재한다.', () => {

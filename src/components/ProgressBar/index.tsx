@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { orange600, gray200 } from '../Colors';
+import { orange600, gray200 } from '../../Colors';
 
 interface Props {
   value?: number;

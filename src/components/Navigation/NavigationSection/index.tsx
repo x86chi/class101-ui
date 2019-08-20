@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import { NavigationSectionAction, NavigationSectionItem, NavigationSectionSubItem } from '..';
-import Badge from '../../../Badge';
+import Badge from '../../Badge';
 import { gray50, gray700, gray900 } from '../../../Colors';
 import { ChevronDown } from '../../../Icon';
 import { body2, caption1 } from '../../../TextStyles';

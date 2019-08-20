@@ -1,8 +1,8 @@
 import React, { PureComponent, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-import { red600, white } from '../Colors';
-import { caption2 } from '../TextStyles';
+import { red600, white } from '../../Colors';
+import { caption2 } from '../../TextStyles';
 
 type Size = 'sm' | 'md';
 interface BadgeTextProps {

@@ -1,4 +1,4 @@
-import ProgressBar from './';
+import ProgressBar from '.';
 
 describe('Grid', () => {
   it('값이 존재한다.', () => {

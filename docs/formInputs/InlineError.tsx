@@ -1,4 +1,4 @@
-import { InlineError, Intent, IconProps } from '@class101/ui';
+import { InlineError, Intent, IconProps } from '../../src';
 import * as React from 'react';
 
 export interface Props {

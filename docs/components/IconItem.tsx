@@ -1,4 +1,4 @@
-import { Caption1, Icon, TextStyles } from '@class101/ui';
+import { Caption1, Icon, TextStyles } from '../../src';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 

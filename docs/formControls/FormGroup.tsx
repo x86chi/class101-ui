@@ -1,4 +1,4 @@
-import { Colors, FormGroup } from '@class101/ui';
+import { Colors, FormGroup } from '../../src';
 import React from 'react';
 
 interface Props {

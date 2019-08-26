@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '@class101/ui';
+import { Icon } from '../../src';
 
 export interface IconProps {
   size?: number;

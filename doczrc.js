@@ -14,14 +14,14 @@ export default {
   },
   wrapper: 'docs/Wrapper',
   typescript: true,
-  modifyBundlerConfig: config => ({
-    ...config,
-    resolve: {
-      ...config.resolve,
-      alias: {
-        ...config.resolve.alias,
-        '@class101/ui': path.resolve('./src'),
-      },
-    },
-  }),
+  // modifyBundlerConfig: config => ({
+  //   ...config,
+  //   resolve: {
+  //     ...config.resolve,
+  //     alias: {
+  //       ...config.resolve.alias,
+  //       '@class101/ui': path.resolve('./src'),
+  //     },
+  //   },
+  // }),
 };

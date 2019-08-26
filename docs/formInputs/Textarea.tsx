@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Textarea } from '@class101/ui';
+import { Textarea } from '../../src';
 
 interface Props {
   /** input의 className */

@@ -1,4 +1,4 @@
-import { BreakPoints, Colors, ThemeConfig, ThemeMode } from '@class101/ui';
+import { BreakPoints, Colors, ThemeConfig, ThemeMode } from '../src';
 import styled from 'styled-components';
 
 export const PlayGroundContainer = styled.div<{ theme: ThemeConfig }>`

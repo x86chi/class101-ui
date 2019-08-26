@@ -1,7 +1,7 @@
 // @flow
 import React, { ReactNode } from 'react';
-import { Button, Colors, Icon, Toast, ToastProps, Toaster, Position } from '@class101/ui';
-import { ElevationValue } from '@class101/ui/ElevationStyles';
+import { Button, Colors, Icon, Toast, ToastProps, Toaster, Position } from '../../src';
+import { ElevationValue } from '../../src/ElevationStyles';
 
 export interface Props {
   /** @default Colors.gray900 */

@@ -1,4 +1,4 @@
-import { Icon } from '@class101/ui';
+import { Icon } from '../../src';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 

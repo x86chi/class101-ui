@@ -16,7 +16,8 @@
     "baseUrl": "src",
     "outDir": "dist",
     "paths": {
-      "interface/*": ["interface/*"]
+      "interface/*": ["interface/*"],
+      "@class101/ui/": ["./*"]
     }
   },
   "include": ["src/**/*"],

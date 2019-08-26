@@ -1,4 +1,4 @@
-import { Colors } from '@class101/ui';
+import { Colors } from '../../src';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 

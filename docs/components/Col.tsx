@@ -1,5 +1,5 @@
 // @flow
-import { Col, Colors } from '@class101/ui';
+import { Col, Colors } from '../../src';
 import React from 'react';
 
 const hiddenStyle = {

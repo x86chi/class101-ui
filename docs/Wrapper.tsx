@@ -1,4 +1,4 @@
-import { GlobalStyle } from '@class101/ui';
+import { GlobalStyle } from '../src';
 import { createBrowserHistory } from 'history';
 import React from 'react';
 import { Router } from 'react-router';

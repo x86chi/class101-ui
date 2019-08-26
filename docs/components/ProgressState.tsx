@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { ProgressState, Colors } from '@class101/ui';
+import { ProgressState, Colors } from '../../src';
 
 interface Props {
   /** 현재 값 */

@@ -1,4 +1,4 @@
-import { Checkbox } from '@class101/ui';
+import { Checkbox } from '../../src';
 import * as React from 'react';
 
 import { HTMLInputProps } from '../../src/interfaces/props';

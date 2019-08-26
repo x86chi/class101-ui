@@ -1,5 +1,3 @@
-import path from 'path';
-
 export default {
   title: 'Class101 UI Docs',
   description: 'A React-based UI Component Library, powered by Class101.',
@@ -12,7 +10,6 @@ export default {
       primary: '#fd7e14',
     },
   },
-  wrapper: 'docs/Wrapper',
   typescript: true,
   // modifyBundlerConfig: config => ({
   //   ...config,

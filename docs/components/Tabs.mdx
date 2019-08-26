@@ -56,26 +56,31 @@ import { PlayGroundContainer } from '../HelpComponents';
 ## onChange
 
 <Playground>
-  {() => {
-    class Example extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = { currentValue: 'PREVIEW' };
+  <>
+    {() => {
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { currentValue: 'PREVIEW' };
+        }
+        render() {
+          return (
+            <Tabs
+              value={this.state.currentValue}
+              onChange={value => {
+                this.setState({ currentValue: value });
+              }}
+            >
+              <Tabs.Item value="PREVIEW" title="알림신청" panel={<div>알림신청</div>} />
+              <Tabs.Item value="KLASS" title="클래스 및 패키지" panel={<div>클래스 및 패키지</div>} />
+              <Tabs.Item value="CURRICLUM" title="커리큘럼" panel={<div>커리큘럼</div>} />
+            </Tabs>
+          );
+        }
       }
-      render() {
-        return (
-          <Tabs value={this.state.currentValue} onChange={(value) => {this.setState({currentValue: value})}} >
-            <Tabs.Item value='PREVIEW' title="알림신청" panel={<div>알림신청</div>}/>
-            <Tabs.Item value='KLASS' title="클래스 및 패키지" panel={<div>클래스 및 패키지</div>}/>
-            <Tabs.Item value='CURRICLUM' title="커리큘럼" panel={<div>커리큘럼</div>}/>
-          </Tabs>
-        );
-      }
-    }
-    return <Example />
-
-}}
-
+      return <Example />;
+    }}
+  </>
 </Playground>
 
 ## Width caption

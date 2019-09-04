@@ -33,7 +33,7 @@ export class Switch extends PureComponent<SwitchProps, SwitchState> {
     hoverColor: orange700,
   };
 
-  public state: SwitchState = {
+  public readonly state: SwitchState = {
     checked: this.props.checked,
   };
 
@@ -42,14 +42,14 @@ export class Switch extends PureComponent<SwitchProps, SwitchState> {
     const { checked } = this.state;
     const label = children || (typeof labelComponent === 'function' ? labelComponent(checked) : labelComponent);
     return (
-      <StyledSwitchContainer inline={inline} disabled={disabled} {...restProps}>
+      <SwitchContainer inline={inline} disabled={disabled} {...restProps}>
         {label && (
-          <StyledSwitchText inline={inline} disabled={disabled}>
+          <SwitchText inline={inline} disabled={disabled}>
             {label}
-          </StyledSwitchText>
+          </SwitchText>
         )}
-        <StyledSwitchBase>
-          <StyledSwitchInput
+        <SwitchBase>
+          <SwitchInput
             type="checkbox"
             checked={checked}
             onChange={this.changeChecked}
@@ -57,8 +57,8 @@ export class Switch extends PureComponent<SwitchProps, SwitchState> {
             hoverColor={hoverColor}
             disabled={disabled}
           />
-        </StyledSwitchBase>
-      </StyledSwitchContainer>
+        </SwitchBase>
+      </SwitchContainer>
     );
   }
 
@@ -77,18 +77,18 @@ const switcherSize = css`
   height: 22px;
 `;
 
-const StyledSwitchBase = styled.div`
+const SwitchBase = styled.div`
   ${switcherSize};
   display: flex;
   position: relative;
 `;
 
-const StyledSwitchContainer = styled.div<{ inline?: boolean; disabled: boolean }>`
+const SwitchContainer = styled.div<{ inline?: boolean; disabled: boolean }>`
   display: ${props => (props.inline ? 'inline-flex' : 'flex')};
   align-items: center;
 `;
 
-const StyledSwitchText = styled.span<{ disabled: boolean; inline?: boolean }>`
+const SwitchText = styled.span<{ disabled: boolean; inline?: boolean }>`
   ${body2};
   color: ${props => (props.disabled ? gray300 : gray800)};
   margin-right: 9px;
@@ -97,10 +97,11 @@ const StyledSwitchText = styled.span<{ disabled: boolean; inline?: boolean }>`
 
 const transitionAnimation = '0.15s ease-out 0.08s';
 
-const StyledSwitchInput = styled.input<{ disabled: boolean; color: string; hoverColor: string }>`
+const SwitchInput = styled.input<{ disabled: boolean; color: string; hoverColor: string }>`
   box-sizing: border-box;
   appearance: none;
   height: 0;
+  border: 0;
   left: 0;
   line-height: 0;
   outline: none;

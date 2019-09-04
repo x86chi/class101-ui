@@ -1,4 +1,4 @@
-import { css, InterpolationFunction, ThemedStyledProps, Interpolation, CSSObject } from 'styled-components';
+import { css, CSSObject, Interpolation, InterpolationFunction, ThemedStyledProps } from 'styled-components';
 
 export function buildMediaQuery({ minWidth, maxWidth }: { minWidth?: number; maxWidth?: number }, not?: boolean) {
   let query = '';
@@ -25,18 +25,18 @@ export function buildMediaQuery({ minWidth, maxWidth }: { minWidth?: number; max
 export default buildMediaQuery;
 
 export const SIZES = {
-  sm: { maxWidth: 1023 },
+  sm: { maxWidth: 1239 },
   md: {}, // TODO: 태블릿 사이즈가 추가되면 수정합니다.
-  lg: { minWidth: 1024 },
+  lg: { minWidth: 1240 },
 };
 
 type Size = keyof typeof SIZES;
 
 export const media = {
-  sm<T extends object>(
+  sm: <T extends {}>(
     first: TemplateStringsArray | CSSObject | InterpolationFunction<ThemedStyledProps<T, {}>>,
     ...interpolations: Interpolation<ThemedStyledProps<T, {}>>[]
-  ) {
+  ) => {
     const mediaQuery = buildMediaQuery(SIZES.sm);
     return css<T>`
       @media ${mediaQuery} {
@@ -44,10 +44,10 @@ export const media = {
       }
     `;
   },
-  md<T extends object>(
+  md: <T extends {}>(
     first: TemplateStringsArray | CSSObject | InterpolationFunction<ThemedStyledProps<T, {}>>,
     ...interpolations: Interpolation<ThemedStyledProps<T, {}>>[]
-  ) {
+  ) => {
     const mediaQuery = buildMediaQuery(SIZES.md);
     return css<T>`
       @media ${mediaQuery} {
@@ -55,10 +55,10 @@ export const media = {
       }
     `;
   },
-  lg<T extends object>(
+  lg: <T extends {}>(
     first: TemplateStringsArray | CSSObject | InterpolationFunction<ThemedStyledProps<T, {}>>,
     ...interpolations: Interpolation<ThemedStyledProps<T, {}>>[]
-  ) {
+  ) => {
     const mediaQuery = buildMediaQuery(SIZES.lg);
     return css<T>`
       @media ${mediaQuery} {

@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
-import ReactIdSwiper from 'react-id-swiper/lib/ReactIdSwiper.custom';
-import { ReactIdSwiperCustomProps, SwiperInstance, SwiperModules } from 'react-id-swiper/lib/types';
+import ReactIdSwiper from 'react-id-swiper/lib/ReactIdSwiper';
+import { ReactIdSwiperCustomProps, SwiperInstance } from 'react-id-swiper/lib/types';
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { AutoplayOptions, PaginationOptions, SwiperEvent } from 'swiper';
-import { Autoplay, Lazy, LazyOptions, Pagination, Swiper } from 'swiper/dist/js/swiper.esm';
+import { LazyOptions, Swiper } from 'swiper/dist/js/swiper.esm';
 
 import { media, SIZES } from '../../core/BreakPoints';
 import { gray700, white } from '../../core/Colors';
@@ -246,7 +246,6 @@ export class Carousel extends PureComponent<CarouselProps, State> {
       params = {
         ...params,
         autoplay,
-        modules: [...(params.modules as SwiperModules), Autoplay],
       };
     }
     if (lazy) {
@@ -254,14 +253,12 @@ export class Carousel extends PureComponent<CarouselProps, State> {
         ...params,
         lazy,
         preloadImages: false,
-        modules: [...(params.modules as SwiperModules), Lazy],
       };
     }
     if (pagination) {
       params = {
         ...params,
         ...DEFAULT_PAGINATION_PARAMS,
-        modules: [...(params.modules as SwiperModules), Pagination],
       };
     }
     return params;

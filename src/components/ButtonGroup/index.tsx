@@ -60,7 +60,11 @@ const FillStyle = css`
   }
 `;
 
-const ButtonGroupContainer = styled.div<ButtonGroupProps>`
+const ButtonGroupContainer = styled(({ fill, ...restProps }) => <div {...restProps} />)<{
+  vertical?: boolean;
+  fill?: boolean;
+  theme?: ThemeConfig;
+}>`
   display: flex;
   ${props => (props.vertical ? VerticalStyle(props.theme.mode) : HorizontalStyle(props.theme.mode))}
   ${props => (props.fill ? FillStyle : '')}

@@ -67,10 +67,13 @@ export class Select extends PureComponent<SelectProps> {
   };
 }
 
-const StyledSelect = styled.select<{ inputSize: InputSize; fill?: boolean }>`
+const StyledSelect = styled(({ inputSize, fill, ...restProps }) => <select {...restProps} />)<{
+  inputSize: InputSize;
+  fill?: boolean;
+}>`
   ${body2}
   ${FormInputStyle}
-  ${props => FormInputStyleBySize[props.inputSize]};
+  ${props => FormInputStyleBySize[props.inputSize as InputSize]};
   ${props => (props.fill ? FormInputFillStyle : null)};
   padding: 12px 48px 12px 16px;
   height: 48px;

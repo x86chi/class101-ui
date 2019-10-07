@@ -201,7 +201,7 @@ const SectionItemStyle = css`
   }
 `;
 
-const SectionLink = styled(Link)<{ active: boolean }>`
+const SectionLink = styled(({ active, ...restProps }) => <Link {...restProps} />)<{ active: boolean }>`
   ${SectionItemStyle};
   ${props =>
     props.active

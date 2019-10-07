@@ -29,7 +29,7 @@ export class IconItemContainer extends PureComponent<{}> {
         {Object.keys(Icon)
           .filter(key => !BLACK_LIST.includes(key))
           .map(key => (
-            <IconItem iconName={key} />
+            <IconItem key={key} iconName={key} />
           ))}
       </Container>
     );

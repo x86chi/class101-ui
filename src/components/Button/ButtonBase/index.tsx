@@ -165,7 +165,9 @@ const buttonCommonStyle = css`
   }
 `;
 
-const ButtonContainer = styled.button<{ iconPosition?: ButtonIconPosition }>`
+const ButtonContainer = styled(({ iconPosition, ...restProps }) => <button {...restProps} />)<{
+  iconPosition?: ButtonIconPosition;
+}>`
   border: 0;
   outline: none;
   box-sizing: border-box;
@@ -202,10 +204,14 @@ const getAnchorButtonStyle = (iconPosition?: ButtonIconPosition) => css`
   }
 `;
 
-const LinkButton = styled(Link)<{ iconPosition?: ButtonIconPosition }>`
+const LinkButton = styled(({ iconPosition, ...restProps }) => <Link {...restProps} />)<{
+  iconPosition?: ButtonIconPosition;
+}>`
   ${props => getAnchorButtonStyle(props.iconPosition)};
 `;
 
-const AnchorButton = styled.a<{ iconPosition?: ButtonIconPosition }>`
+const AnchorButton = styled(({ iconPosition, ...restProps }) => <a {...restProps} />)<{
+  iconPosition?: ButtonIconPosition;
+}>`
   ${props => getAnchorButtonStyle(props.iconPosition)};
 `;

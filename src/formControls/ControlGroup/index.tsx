@@ -10,7 +10,6 @@ export interface ContainerProps extends CommonProps {
   fill?: boolean;
 }
 
-// FixMe: https://github.com/styled-components/styled-components/issues/1198
 interface StyledContainerProps extends CommonProps {
   fill?: string;
 }
@@ -31,7 +30,7 @@ export class ControlGroup extends PureComponent<ContainerProps> {
   }
 }
 
-const Container = styled.div<StyledContainerProps>`
+const Container = styled(({ fill, vertical, ...restProps }) => <div {...restProps} />)<StyledContainerProps>`
   display: flex;
   align-items: stretch;
 

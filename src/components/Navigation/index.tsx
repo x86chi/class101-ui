@@ -53,10 +53,14 @@ export class Navigation extends React.PureComponent<Props> {
 
     return (
       <Container {...divAttributes} className={className}>
-        {React.Children.map(
-          children,
-          child => child && React.cloneElement(child as React.ReactElement<any>, { pathname, onClickLink })
-        )}
+        {React.Children.map(children, child => {
+          return (
+            child &&
+            (child as any).type &&
+            (child as any).type.name === NavigationSection.name &&
+            React.cloneElement(child as React.ReactElement<any>, { pathname, onClickLink })
+          );
+        })}
       </Container>
     );
   }

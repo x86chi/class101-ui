@@ -62,8 +62,6 @@ export { default as Download } from './generated/Download';
 export { default as DropDown } from './generated/DropDown';
 export { default as Earybird } from './generated/Earybird';
 export { default as Edit } from './generated/Edit';
-export { default as EditBullet } from './generated/EditBullet';
-export { default as EditNumber } from './generated/EditNumber';
 export { default as EditOutline } from './generated/EditOutline';
 export { default as Eye } from './generated/Eye';
 export { default as EyeOff } from './generated/EyeOff';

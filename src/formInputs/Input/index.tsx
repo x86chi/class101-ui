@@ -60,6 +60,7 @@ export class Input extends React.PureComponent<HTMLInputProps & InputProps> {
           })}
           {...restProps}
         />
+        {!(allowMessage || errorMessage || warnMessage) && <DummyError>Dummy</DummyError>}
         {allowMessage && !errorMessage && (
           <InlineError icon={null} intent={Intent.DEFAULT}>
             {allowMessage}
@@ -99,4 +100,11 @@ const InlineLabel = styled.label`
   display: flex;
   align-items: center;
   margin-bottom: 4px;
+`;
+
+const DummyError = styled.h6`
+  line-height: 16px;
+  font-size: 11px;
+  margin: 2px 0;
+  opacity: 0;
 `;
